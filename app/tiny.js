@@ -13,7 +13,13 @@ define(function (require) {
         this.position = (this.position + spaces) % 40;
     };
 
+
+    function PlayerName(name) {
+        this.name = name;
+    }
+
     return {
-        Location: Location
+        Location: Location,
+        PlayerName: PlayerName
     };
 });

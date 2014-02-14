@@ -1,6 +1,8 @@
 define(function (require) {
     'use strict';
-    var Location = require('tiny').Location;
+    var Tiny = require('tiny'),
+        Location = Tiny.Location,
+        PlayerName = Tiny.PlayerName;
 
     describe('Tiny', function () {
         describe('Location', function () {
@@ -45,6 +47,15 @@ define(function (require) {
                     var location = new Location(45);
                     location.incrementPosition(50);
                     expect(location.getPosition()).toBe(15);
+                });
+            });
+        });
+
+        describe('PlayerName', function () {
+            describe('ctor', function () {
+                it('accepts a player name string', function () {
+                    var horse = new PlayerName('Horse');
+                    expect(horse.name).toBe('Horse');
                 });
             });
         });

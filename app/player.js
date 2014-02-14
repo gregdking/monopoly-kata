@@ -1,7 +1,8 @@
 define(function (require) {
     'use strict';
 
-    function Player(location) {
+    function Player(name, location) {
+        this.name = name;
         this.location = location;
     }
 
